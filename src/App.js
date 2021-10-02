@@ -1,16 +1,22 @@
 // import logo from './logo.svg';
 // import './App.css';
+import { Route, Switch, withRouter } from 'react-router-dom';
+import routes from './routes'
 import Article from "./components/Article";
 
-function App() {
+const App = () => {
   return (
-      <div className="App">
-        <Article
-          title={'React入門'}
-          content={'ここはコンテンツです！testok'}
+    <Switch>
+      {routes.map((route, idx) => (
+        <Route
+          path={route.path}
+          exact={route.exact}
+          component={route.component}
+          key={idx}
         />
-      </div>
+      ))}
+    </Switch>
   );
-}
+};
 
-export default App;
+export default withRouter(App);
