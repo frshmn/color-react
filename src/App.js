@@ -7,7 +7,7 @@ function App() {
     <div className="App">
       <Article
         title={'React入門'}
-        content={'ここはコンテンツです'}
+        content={'ここはコンテンツです！'}
       />
     </div>
   );
