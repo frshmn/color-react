@@ -7,6 +7,7 @@ class Two extends React.Component{
     return(
       <div>
         test_two<br/>
+        <p>{this.props.location.state.text}</p>
         <Link to='/'>oneへ</Link>
       </div>
     )
